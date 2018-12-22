@@ -9,6 +9,10 @@ metadata:
   namespace: tiller
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: helm
+      name: tiller
   template:
     metadata:
       labels:
