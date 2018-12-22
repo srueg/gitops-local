@@ -1,0 +1,1 @@
+{"jobID":"a762f497-1fbe-81cd-76b6-fa9a32ce6dd4","spec":{"type":"policy","cause":{"Message":"","User":"Simon Rüegg \u003csimon@rueggs.ch\u003e"},"spec":{"tiller:deployment/tiller-deploy":{"add":{"automated":"true"},"remove":{}}}},"result":null}
