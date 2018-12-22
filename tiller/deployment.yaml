@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: tiller
-        image: gcr.io/kubernetes-helm/tiller:canary
+        image: gcr.io/kubernetes-helm/tiller:v2.12.1
         imagePullPolicy: IfNotPresent
         env:
         - name: TILLER_NAMESPACE
