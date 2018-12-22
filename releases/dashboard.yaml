@@ -1,0 +1,23 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: dashboard
+  namespace: dashboard
+spec:
+  releaseName: dashboard
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: kubernetes-dashboard
+    version: 0.10.2
+  values:
+    fullnameOverride: kubernetes-dashboard
+    ingress:
+      enabled: true
+      hosts:
+      - dash.127.0.0.1.nip.io
+      tls:
+      - hosts:
+        - dash.127.0.0.1.nip.io
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        nginx.ingress.kubernetes.io/backend-protocol: HTTPS
