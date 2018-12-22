@@ -1,0 +1,11 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: nginx-ingress
+  namespace: ingress-controller
+spec:
+  releaseName: nginx-ingress
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: nginx-ingress
+  values:
