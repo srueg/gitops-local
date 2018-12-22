@@ -13,4 +13,5 @@ spec:
       url: git@github.com:srueg/gitops-local.git
     helmOperator:
       create: true
+      createCRD: false
       tillerNamespace: tiller
