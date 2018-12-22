@@ -10,3 +10,5 @@ spec:
     name: nginx-ingress
     version: 1.1.1
   values:
+    podSecurityPolicy:
+      enabled: true
