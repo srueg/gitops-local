@@ -4,6 +4,7 @@ metadata:
   name: flux
   namespace: flux
 spec:
+  releaseName: flux
   chart:
     repository: https://weaveworks.github.io/flux
     name: flux
