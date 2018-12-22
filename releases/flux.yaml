@@ -1,0 +1,16 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: flux
+  namespace: flux
+spec:
+  chart:
+    repository: https://weaveworks.github.io/flux
+    name: flux
+    version: 0.5.2
+  values:
+    git:
+      url: git@github.com:srueg/gitops-local.git
+    helmOperator:
+      create: true
+      tillerNamespace: tiller
