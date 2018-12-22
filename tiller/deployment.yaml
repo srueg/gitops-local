@@ -1,0 +1,44 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helm
+    name: tiller
+  name: tiller-deploy
+  namespace: tiller
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: helm
+        name: tiller
+      annotations:
+        flux.weave.works/automated: "true"
+        flux.weave.works/tag.tiller: "glob:v2.*.*"
+    spec:
+      containers:
+      - name: tiller
+        image: gcr.io/kubernetes-helm/tiller:v2.12.1
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: TILLER_NAMESPACE
+          value: tiller
+        - name: TILLER_HISTORY_MAX
+          value: "10"
+        ports:
+        - containerPort: 44134
+          name: tiller
+        - containerPort: 44135
+          name: http
+        livenessProbe:
+          httpGet:
+            path: /liveness
+            port: 44135
+          initialDelaySeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /readiness
+            port: 44135
+          initialDelaySeconds: 1
