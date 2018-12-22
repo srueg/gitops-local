@@ -9,6 +9,7 @@ metadata:
   namespace: tiller
   annotations:
     flux.weave.works/automated: 'true'
+    flux.weave.works/tag.tiller: "glob:v2.*.*"
 spec:
   replicas: 1
   selector:
@@ -20,9 +21,6 @@ spec:
       labels:
         app: helm
         name: tiller
-      annotations:
-        flux.weave.works/automated: "true"
-        flux.weave.works/tag.tiller: "glob:v2.*.*"
     spec:
       containers:
       - name: tiller
