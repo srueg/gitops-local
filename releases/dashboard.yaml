@@ -12,7 +12,6 @@ spec:
   values:
     fullnameOverride: kubernetes-dashboard
     rbac:
-      create: false
       clusterAdminRole: true
     ingress:
       enabled: true
