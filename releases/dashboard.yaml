@@ -11,6 +11,9 @@ spec:
     version: 0.10.2
   values:
     fullnameOverride: kubernetes-dashboard
+    rbac:
+      create: false
+      clusterAdminRole: true
     ingress:
       enabled: true
       hosts:
