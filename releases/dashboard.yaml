@@ -2,7 +2,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: dashboard
-  namespace: kube-system
+  namespace: dashboard
 spec:
   releaseName: dashboard
   chart:
