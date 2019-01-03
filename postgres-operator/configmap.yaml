@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: postgres-operator
   namespace: postgres-operator
+  labels:
+    app: postgres-operator
 data:  
   watched_namespace: "*" # listen to all namespaces
   cluster_labels: application:spilo

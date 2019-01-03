@@ -3,12 +3,17 @@ kind: Deployment
 metadata:
   name: postgres-operator
   namespace: postgres-operator
+  labels:
+    app: postgres-operator
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-operator
   template:
     metadata:
       labels:
-        name: postgres-operator
+        app: postgres-operator
     spec:
       serviceAccountName: zalando-postgres-operator
       containers:
