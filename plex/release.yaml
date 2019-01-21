@@ -4,7 +4,7 @@ metadata:
   name: plex
   namespace: plex
 spec:
-  releaseName: dashboard
+  releaseName: plex
   chart:
     git: https://github.com/srueg/helm-charts.git
     ref: master
