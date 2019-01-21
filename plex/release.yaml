@@ -10,6 +10,11 @@ spec:
     ref: master
     path: plex
   values:
+    persistence:
+      config:
+        storageClass: hostpath
+      data:
+        storageClass: hostpath
     ingress:
       hosts:
       - plex.127.0.0.1.nip.io
