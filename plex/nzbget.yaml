@@ -1,0 +1,23 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: nzbget
+  namespace: plex
+spec:
+  releaseName: nzbget
+  chart:
+    git: https://github.com/srueg/helm-charts.git
+    ref: master
+    path: nzbget
+  values:
+    persistence:
+      config:
+        storageClass: hostpath
+      data:
+        storageClass: hostpath
+    ingress:
+      hosts:
+      - nzbget.127.0.0.1.nip.io
+      tls:
+      - hosts:
+        - nzbget.127.0.0.1.nip.io
