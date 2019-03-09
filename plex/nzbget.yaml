@@ -13,7 +13,7 @@ spec:
     persistence:
       config:
         storageClass: hostpath
-      data:
+      downloads:
         storageClass: hostpath
     ingress:
       hosts:
