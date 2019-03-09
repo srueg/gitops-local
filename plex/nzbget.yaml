@@ -16,6 +16,7 @@ spec:
       downloads:
         storageClass: hostpath
     ingress:
+      enabled: true
       hosts:
       - nzbget.127.0.0.1.nip.io
       tls:

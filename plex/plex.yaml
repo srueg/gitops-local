@@ -16,6 +16,7 @@ spec:
       data:
         storageClass: hostpath
     ingress:
+      enabled: true
       hosts:
       - plex.127.0.0.1.nip.io
       tls:
