@@ -1,0 +1,22 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: sonarr
+  namespace: plex
+spec:
+  releaseName: sonarr
+  chart:
+    git: https://github.com/srueg/helm-charts.git
+    ref: master
+    path: sonarr
+  values:
+    persistence:
+      config:
+        storageClass: hostpath
+    ingress:
+      enabled: true
+      hosts:
+      - sonarr.127.0.0.1.nip.io
+      tls:
+      - hosts:
+        - sonarr.127.0.0.1.nip.io
