@@ -5,6 +5,8 @@ metadata:
   namespace: netdata
   labels:
     app: netdata
+  annotations:
+    kubernetes.io/tls-acme: "true"
 spec:
   rules:
   - host: stats.127.0.0.1.nip.io
@@ -17,3 +19,4 @@ spec:
   tls:
   - hosts:
     - stats.127.0.0.1.nip.io
+    secretName: netdata-tls
