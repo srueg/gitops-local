@@ -8,7 +8,7 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: nginx-ingress
-    version: 1.1.4
+    version: 1.3.1
   values:
     podSecurityPolicy:
       enabled: true
