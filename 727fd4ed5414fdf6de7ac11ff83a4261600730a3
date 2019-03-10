@@ -1,0 +1,1 @@
+{"jobID":"887525c8-0f50-c9cd-9066-d14913d8d7ab","spec":{"type":"policy","cause":{"Message":"","User":"Simon Rüegg \u003csimon@rueggs.ch\u003e"},"spec":{"sealed-secrets:helmrelease/sealed-secrets":{"add":{"automated":"true"},"remove":{}}}},"result":null}
