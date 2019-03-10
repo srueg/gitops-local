@@ -6,7 +6,7 @@ metadata:
   labels:
     app: netdata
   annotations:
-    kubernetes.io/tls-acme: "true"
+    kubernetes.io/tls-acme: "false"
 spec:
   rules:
   - host: stats.127.0.0.1.nip.io
