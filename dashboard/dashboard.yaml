@@ -3,6 +3,9 @@ kind: HelmRelease
 metadata:
   name: dashboard
   namespace: dashboard
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:v1.*.*
 spec:
   releaseName: dashboard
   chart:
