@@ -3,6 +3,9 @@ kind: HelmRelease
 metadata:
   name: nzbget
   namespace: plex
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:v20*
 spec:
   releaseName: nzbget
   chart:
@@ -10,6 +13,8 @@ spec:
     ref: master
     path: nzbget
   values:
+    image:
+      tag: v20.0-ls5
     persistence:
       config:
         storageClass: hostpath

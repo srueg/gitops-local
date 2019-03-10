@@ -3,6 +3,9 @@ kind: HelmRelease
 metadata:
   name: radarr
   namespace: plex
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:0.*
 spec:
   releaseName: radarr
   chart:

@@ -8,8 +8,7 @@ metadata:
     app: netdata
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.oauth-proxy: semver:*
-    flux.weave.works/tag.netdata: semver:*
+    flux.weave.works/tag.oauth-proxy: glob:v3.*
 spec:
   replicas: 1
   selector:

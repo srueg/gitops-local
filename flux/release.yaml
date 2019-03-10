@@ -3,6 +3,10 @@ kind: HelmRelease
 metadata:
   name: flux
   namespace: flux
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~1
+    flux.weave.works/tag.helmOperator: semver:~0
 spec:
   releaseName: flux
   chart:

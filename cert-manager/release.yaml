@@ -6,7 +6,7 @@ metadata:
   namespace: cert-manager
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: semver:*
+    flux.weave.works/tag.chart-image: glob:v0.*
 spec:
   releaseName: cert-manager
   chart:

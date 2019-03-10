@@ -3,6 +3,9 @@ kind: HelmRelease
 metadata:
   name: nginx-ingress
   namespace: ingress-controller
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:*
 spec:
   releaseName: nginx-ingress
   chart:

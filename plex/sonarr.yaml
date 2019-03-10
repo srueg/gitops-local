@@ -3,6 +3,9 @@ kind: HelmRelease
 metadata:
   name: sonarr
   namespace: plex
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:3.*
 spec:
   releaseName: sonarr
   chart:

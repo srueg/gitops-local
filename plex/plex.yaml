@@ -3,6 +3,9 @@ kind: HelmRelease
 metadata:
   name: plex
   namespace: plex
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:1.*
 spec:
   releaseName: plex
   chart:
