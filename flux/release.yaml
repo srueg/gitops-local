@@ -17,4 +17,4 @@ spec:
       createCRD: false
       tillerNamespace: tiller
     registry:
-      excludeImage: docker.io/netdata/netdata
+      excludeImage: index.docker.io/netdata/netdata
