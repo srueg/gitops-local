@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: netdata
+  namespace: netdata
+  labels:
+    app: netdata
+spec:
+  rules:
+  - host: stats.127.0.0.1.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: netdata
+          servicePort: proxy
+        path: /
+  tls:
+  - hosts:
+    - stats.127.0.0.1.nip.io
