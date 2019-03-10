@@ -13,3 +13,5 @@ spec:
     name: sealed-secrets
     version: 1.0.1
   values:
+    image:
+      tag: v0.7.0
