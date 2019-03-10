@@ -1,0 +1,11 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClsuterIssuer
+metadata:
+  name: letsencrypt-staging
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: simon@rueggs.ch
+    privateKeySecretRef:
+      name: letsencrypt-staging
+    http01: {}
