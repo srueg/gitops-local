@@ -1,0 +1,1 @@
+{"jobID":"8bd8eb31-4a60-d288-e0d9-467f04ae4a91","spec":{"type":"policy","cause":{"Message":"","User":"Simon Rüegg \u003csimon@rueggs.ch\u003e"},"spec":{"netdata:deployment/netdata":{"add":{"tag_all":"semver:*"},"remove":{}}}},"result":null}
